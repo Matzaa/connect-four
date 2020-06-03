@@ -1,4 +1,4 @@
-(function() {
+(function () {
     // startup ---------------------------------------------------------------
     var currentPlayer = "player1";
     $("#board").addClass("startBoard");
@@ -29,20 +29,20 @@
         [20, 27, 34, 41],
         [21, 26, 31, 36],
         [22, 27, 31, 37],
-        [23, 28, 33, 38]
+        [23, 28, 33, 38],
     ];
 
     // mouse indicator -------------------------------------------------------
-    $(document).on("mousemove", function(e) {
+    $(document).on("mousemove", function (e) {
         var newX = e.pageX - 10;
         var newY = e.pageY - 10;
         $("#indicator").css({
-            transform: "translate" + "(" + newX + "px, " + newY + "px)"
+            transform: "translate" + "(" + newX + "px, " + newY + "px)",
         });
     });
 
     // click! -------------------------------------------------------------------
-    $(".column").on("click", function(e) {
+    $(".column").on("click", function (e) {
         var col = $(e.currentTarget);
         var slotsInCol = col.children();
         console.log("col?", col);
@@ -152,7 +152,7 @@
         $("#anotherGame1").removeClass("hideme");
         $("#indicator").hide();
         $("#everything").css({
-            backgroundColor: "black"
+            backgroundColor: "black",
         });
         setTimeout(disappear, 100);
     }
@@ -163,13 +163,13 @@
         $("#anotherGame2").removeClass("hideme");
         $("#indicator").hide();
         $("#everything").css({
-            backgroundColor: "rgb(27, 143, 189)"
+            backgroundColor: "rgb(27, 143, 189)",
         });
         $("p").css({
-            color: "black"
+            color: "black",
         });
         $("h2").css({
-            color: "black"
+            color: "black",
         });
         setTimeout(disappear, 100);
     }
@@ -180,7 +180,7 @@
     }
 
     // new game button ----------------------------------------------------
-    $("button").on("click", function() {
+    $("button").on("click", function () {
         $(".game-container").show();
         $("h1").show();
         $("#anotherGame1").addClass("hideme");
@@ -190,13 +190,13 @@
             ? $("#indicator").css({ border: "black 8px solid" })
             : $("#indicator").css({ border: "rgb(27, 143, 189) 8px solid" });
         $("#everything").css({
-            backgroundColor: "rebeccapurple"
+            backgroundColor: "rebeccapurple",
         });
         $("p").css({
-            color: "rebeccapurple"
+            color: "rebeccapurple",
         });
         $("h2").css({
-            color: "rebeccapurple"
+            color: "rebeccapurple",
         });
         $("h2").removeClass("disappear");
         $("p").removeClass("grow");
