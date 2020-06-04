@@ -178,6 +178,7 @@ button {
 
     .grow {
         transition: none;
+        font-size: 20px;
     }
 
     h2 {
