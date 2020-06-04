@@ -170,4 +170,21 @@ button {
     h1 {
         font-size: 34px;
     }
+
+    p {
+        font-size: 20px;
+        margin: 0px 7px;
+    }
+
+    .grow {
+        transition: none;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    /* .disappear {
+        transition: none;
+    } */
 }
